@@ -1,0 +1,21 @@
+FROM node:alpine    
+#baseImage  
+
+WORKDIR '/client'
+#the directory to work on, it will be created if not available
+
+COPY package.json ./
+COPY package-lock.json ./
+#copy package.json to the current directory that is '/app'
+
+RUN npm install
+RUN npm i firebase
+#install all the dependancies for node to run
+
+COPY . .
+#copy everything from the current directory to the container
+
+CMD [ "npm", "run", "start" ]
+#commands to execute after the container is deployed
+
+

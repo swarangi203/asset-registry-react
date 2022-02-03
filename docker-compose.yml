@@ -1,0 +1,12 @@
+version: '3'
+#version of docker compose
+
+services:
+  deployment-client-v:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4500:3000'
+    volumes:
+      - /client/node_modules 
