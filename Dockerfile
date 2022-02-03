@@ -1,5 +1,5 @@
 ARG REPO=220052277279.dkr.ecr.us-east-1.amazonaws.com/node:latest
-
+FROM node:latest
 FROM ${REPO}/node:latest    
 #baseImage  
 
